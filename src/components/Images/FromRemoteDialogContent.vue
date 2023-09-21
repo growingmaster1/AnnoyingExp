@@ -12,6 +12,17 @@
           </v-col>
         </v-row>
         <v-row>
+          <v-col>
+            常用地址：
+          </v-col>
+          <v-col v-for="(item,index) in regularButtons" :key='index' @click="UseRegular(item)">
+            <v-btn>
+              {{ item }}
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row></v-row>
+        <v-row>
           <span class="ml-2" v-text="result"></span>
         </v-row>
       </v-container>
@@ -33,6 +44,12 @@ export default {
       cardLoading: false,
       url: '',
       result: '等待拉取',
+      regularButtons:[
+        "nginx",
+        "mysql",
+        "redis",
+        "wordpress",
+      ]
     }
   },
   methods: {
@@ -48,6 +65,9 @@ export default {
       })
       this.cardLoading = false;
     },
+    UseRegular(itemName) {
+      this.url = itemName
+    }
   }
 }
 </script>

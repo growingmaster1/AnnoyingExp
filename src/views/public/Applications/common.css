@@ -10,7 +10,7 @@
     padding: 50px;
   }
   .expansion-panel-class {
-    box-shadow: 0 0 50px 0.1px silver;
+    box-shadow: 0 0 50px 0.1px #eee;
     border-radius: 20px;
   }
   .cell-width{

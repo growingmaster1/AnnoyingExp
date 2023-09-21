@@ -9,20 +9,20 @@
         <v-expansion-panel-header>
           <div class="panel-header">
             <h3>Pod 名称 :{{ item.name }}</h3>
-            <v-chip class="chip" color="blue darken-4" dark label
-              >namespace:{{ item.namespace }}</v-chip
+            <v-chip class="ma-2 chip" color="primary" variant="outlined" dark label
+              >namespace: {{ item.namespace }}</v-chip
             >
-            <v-chip class="chip" color="indigo lighten-2" dark label
-              >node 名称:{{ item.node_name }}</v-chip
+            <v-chip class="chip" color="success" label
+              >node 名称: {{ item.node_name }}</v-chip
             >
-            <v-chip class="chip" color="blue" dark label
-              >node IP地址:{{ item.pod_ip }}</v-chip
+            <v-chip class="chip" color="success" label
+              >node IP地址: {{ item.pod_ip }}</v-chip
             >
           </div>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-card elevation="0" color="blue lighten-2" dark flat> 
-            <v-card-title>容器列表</v-card-title>
+            <!-- <v-card-title>容器列表</v-card-title> -->
             <v-card elevation="0" light  outlined>
               <v-simple-table light style="margin:10px">
                 <template v-slot:default>

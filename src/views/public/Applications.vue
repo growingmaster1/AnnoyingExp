@@ -3,10 +3,10 @@
     <template>
       <v-card>
         <v-tabs
-          background-color="light-blue accent-4"
+          background-color="#ddd"
           @change="changeTab"
           center-active
-          dark
+          theme="lolipop"
         >
           <v-tab>Pods 容器</v-tab>
           <v-tab>Deployment 部署</v-tab>

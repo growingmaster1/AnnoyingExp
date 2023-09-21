@@ -104,7 +104,7 @@
                     <v-row>
                       <v-chip v-for="pair in createContainerForm.ports" :key="pair[0]" class="ma-2" close
                               @click:close="createContainerForm.ports.splice(createContainerForm.ports.indexOf(pair),1)">
-                        {{ pair[0] + pair[1] }}
+                        {{ pair[0] + ":" + pair[1] }}
                       </v-chip>
                     </v-row>
                   </v-container>
@@ -371,6 +371,15 @@
         for(let i = 0, l = this.createContainerForm.environment.length; i < l; i++) {
           form.append('environment', this.createContainerForm.environment[i]);
         }
+        for(let i = 0, l = this.createContainerForm.ports.length; i < l; i++) {
+          console.log("Container Port", this.createContainerForm.ports[i][0])
+          form.append('containerports', this.createContainerForm.ports[i][0]);
+        }
+        for(let i = 0, l = this.createContainerForm.ports.length; i < l; i++) {
+          console.log("Host Port", this.createContainerForm.ports[i][1])
+          form.append('hostports', this.createContainerForm.ports[i][1]);
+        }
+        console.log(this.createContainerForm);
         this.result = '正在加载...';
         await this.$axios.post('/run_container', form).then((res) => {
           if(res.data === 'create success') this.result = '容器已启动';

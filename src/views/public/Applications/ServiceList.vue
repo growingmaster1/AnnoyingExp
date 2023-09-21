@@ -63,7 +63,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-card elevation="0" color="blue lighten-2" dark flat>
-            <v-card-title>详情与操作</v-card-title>
+            <!-- <v-card-title>详情与操作</v-card-title> -->
             <v-card elevation="0" light outlined>
               <v-card-subtitle> 创建时间 </v-card-subtitle>
               <v-card-text>{{ item.creation_timestamp }}</v-card-text>

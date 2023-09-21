@@ -42,7 +42,7 @@ export default {
         items: [
           { title: '镜像管理', icon: 'mdi-monitor-multiple', route: '/images'},
           { title: '容器管理', icon: 'mdi-cat', route: '/containers'},
-          //{ title: '应用部署', icon: 'mdi-emoticon-poop', route: '/applications'},
+          { title: '应用部署', icon: 'mdi-emoticon-poop', route: '/applications'},
         ],
       }
     },

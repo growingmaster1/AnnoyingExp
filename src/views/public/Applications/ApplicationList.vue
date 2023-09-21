@@ -131,7 +131,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-card elevation="0" color="blue lighten-2" dark flat>
-            <v-card-title>部署列表</v-card-title>
+            <!-- <v-card-title>部署列表</v-card-title> -->
             <v-card elevation="0" light outlined>
               <v-simple-table light style="margin: 10px">
                 <template v-slot:default>
@@ -159,8 +159,9 @@
               </v-simple-table>
             </v-card>
           </v-card>
+          <div style="height:20px"></div>
           <v-card elevation="0" color="blue lighten-2" dark flat>
-            <v-card-title>服务列表</v-card-title>
+            <!-- <v-card-title>服务列表</v-card-title> -->
             <v-card elevation="0" light outlined>
               <v-simple-table light style="margin: 10px">
                 <template v-slot:default>
